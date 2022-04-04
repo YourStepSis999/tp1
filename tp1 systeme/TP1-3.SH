@@ -1,3 +1,4 @@
 #!/bin/bash
 
-awk '{print FILENAME" \"" $0"\""; nextfile}' *.txt >output.txt
+cd "$args"
+head -10 *.txt  >> cac.txt
