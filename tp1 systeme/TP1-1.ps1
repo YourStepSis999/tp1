@@ -2,11 +2,14 @@
 $repertoire = $args
 
 
-
-
-foreach($file in (get-childitem $repertoire -File -Filter "*.txt" )){
+try{
+foreach($file in (get-childitem $repertoire -File -Filter "*.txt" -ErrorAction Stop )){
    $nom = [System.IO.Path]::GetFileName("$file")
 
- "$nom" + " " + (get-content $file.fullname | select -First 10) | add-content entete.txt
+ "$nom" + " " + (get-content $file.fullname | select -First 10) | add-content entete.txt -ErrorAction Stop
      
+  }
+} 
+catch {
+  echo "Erreur"
 }
