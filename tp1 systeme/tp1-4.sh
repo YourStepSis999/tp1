@@ -1,28 +1,16 @@
 #!/bin/bash
 
 MAXCOUNT=$1
-count=1
 
-while [ "$count" -le $MAXCOUNT ]; do
-PORT=$(( ((RANDOM<<15)|RANDOM) % 65536 + 0 ))
- ARRAY+=($PORT)
- let "count += 1"
-done
 
-echo ${ARRAY[*]}
+nombre=$(shuf -i 1-65536 -n$MAXCOUNT)
 
-for i in ${ARRAY[@]} 
-do
-if ps -p $i;
+echo "${nombre[@]}"
+
+for i in ${nombre[@]}; do
+if ps -p $i > /dev/mull;
 then
-  echo " is running"
-   
+   nom=(ps -p $i -o comm=)
+   echo "$i, $nom a ce process"
 fi
 done
-
-if pgrep -x "Registery" > /dev/null
-then
-    echo "Running"
-else
-    echo "Stopped"
-fi
