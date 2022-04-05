@@ -16,7 +16,7 @@ for ($i = 0; $i -lt 26 ; $i++) {
     $joueur2+=$DeckShuffled[$i]
     
 } 
-while ($joueur2.Count -ne 52) {
+while (true) {
     if ([int]$joueur1[0] -gt [int]$joueur2[0]) {
         $joueur1+=$joueur2[0]
         $joueur2.RemoveAt(0)
@@ -34,17 +34,19 @@ while ($joueur2.Count -ne 52) {
         $joueur2.RemoveAt(0)
         
     }
+
+    if($joueur1.Count -eq 52){
+    "Joueur 1 a gagner"
+    break
+    } elseif ($joueur2.Count -eq 52) {
+    "Joueur 2 a gagner"
+    break
+    } 
+
+
     
 }
 
-    
-
-
-if($joueur1.Count -eq 52){
- "Joueur 1 a gagner"
-} elseif ($joueur2.Count -eq 52) {
-    "Joueur 2 a gagner"
-} 
     
 
 
