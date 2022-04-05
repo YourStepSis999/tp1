@@ -6,7 +6,7 @@ do {
      $chiffre = 1..65536| Get-Random
      $list += $chiffre
      $nombre2++
-} while ($args -gt $nombre2)
+} while ($Nombre -gt $nombre2)
     
 
 foreach($object in $list){
