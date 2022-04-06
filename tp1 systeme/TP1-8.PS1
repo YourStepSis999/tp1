@@ -6,7 +6,7 @@ $deck =@("1", "1", "1", "1", "2", "2", "2", "2", "3", "3", "3", "3", "4", "4", "
 "12", "13", "13", "13", "13")
 
 [System.Collections.ArrayList]$DeckShuffled = $deck | Sort-Object {Get-Random}
-
+$gagner = $false
 
 for ($i = 0; $i -lt 26; $i++) {
     $joueur1+=$DeckShuffled[$i]
@@ -16,7 +16,7 @@ for ($i = 0; $i -lt 26 ; $i++) {
     $joueur2+=$DeckShuffled[$i]
     
 } 
-while (true) {
+while (!$gagner) {
     if ([int]$joueur1[0] -gt [int]$joueur2[0]) {
         $joueur1+=$joueur2[0]
         $joueur2.RemoveAt(0)
@@ -35,12 +35,12 @@ while (true) {
         
     }
 
-    if($joueur1.Count -eq 52){
-    "Joueur 1 a gagner"
-    break
-    } elseif ($joueur2.Count -eq 52) {
+    if($joueur1.Count -eq 1){
     "Joueur 2 a gagner"
-    break
+    $gagner = $true
+    } elseif ($joueur2.Count -eq 1) {
+    "Joueur 1 a gagner"
+    $gagner = $true
     } 
 
 

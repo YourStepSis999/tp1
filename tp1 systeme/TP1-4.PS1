@@ -2,7 +2,9 @@
 $Nombre = $args
 $Nombre2 = 0
 $list = @()
-do {
+
+try {
+  do {
      $chiffre = 1..65536| Get-Random
      $list += $chiffre
      $nombre2++
@@ -10,11 +12,15 @@ do {
     
 
 foreach($object in $list){
-     if ( Get-Process -Id $object -ErrorAction SilentlyContinue ) {
-          $nom = (Get-Process -id $object).Name
+     if ( Get-Process -ErrorAction stop -Id $object -ErrorAction SilentlyContinue ) {
+          $nom = (Get-Process -ErrorAction stop -id $object).Name
           "$object" + "," + "$nom a ce numéro"
      } 
      else {"$object, aucun processus a ce numero"
-} }
-     
+} }   
+}
+catch {
+     echo "Une Erreur c'est produite"
+}
+
 

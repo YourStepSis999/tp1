@@ -11,5 +11,5 @@ foreach($file in (get-childitem $repertoire -File -Filter "*.txt" -ErrorAction S
   }
 } 
 catch {
-  echo "Erreur"
+  echo "Une Erreur c'est produite"
 }
