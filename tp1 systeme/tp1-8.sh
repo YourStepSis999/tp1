@@ -1,5 +1,9 @@
-#!/bin/bash
+# Auteur : Charles-Olivier Lefebvre
+# DA : 2130875
+# Session : H2022
+# Date de création : 2022-04-01
 
+#!/bin/bash
 
 deck=(1 2 3 4 5 6 7 8 9 10 11 12 13 1 2 3 4 5 6 7 8 9 10 11 12 13 1 2 3 4 5 6 7 8 9 10 11 12 13 1 2 3 4 5 6 7 8 9 10 11 12 13)
 DeckShuffled=( $(shuf -e "${deck[@]}") )

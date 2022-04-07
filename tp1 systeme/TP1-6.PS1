@@ -1,8 +1,7 @@
-
-
-
-
-
+# Auteur : Charles-Olivier Lefebvre
+# DA : 2130875
+# Session : H2022
+# Date de création : 2022-04-01
 
 $disks = get-wmiobject Win32_LogicalDisk  -Filter "DriveType = 3"
 

@@ -1,3 +1,8 @@
+# Auteur : Charles-Olivier Lefebvre
+# DA : 2130875
+# Session : H2022
+# Date de création : 2022-04-01
+
 [System.Collections.ArrayList]$joueur1=@()
 [System.Collections.ArrayList]$joueur2=@()
 $deck =@("1", "1", "1", "1", "2", "2", "2", "2", "3", "3", "3", "3", "4", "4", "4", "4",
