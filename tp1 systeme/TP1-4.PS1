@@ -1,14 +1,14 @@
 
 $Nombre = $args
-$Nombre2 = 0
+$NombreMax = 0
 $list = @()
 
 try {
   do {
      $chiffre = 1..65536| Get-Random
      $list += $chiffre
-     $nombre2++
-} while ($Nombre -gt $nombre2)
+     $NombreMax++
+} while ($Nombre -gt $NombreMax)
     
 
 foreach($object in $list){

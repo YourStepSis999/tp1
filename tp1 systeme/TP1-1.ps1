@@ -3,10 +3,10 @@ $repertoire = $args
 
 
 try{
-foreach($file in (get-childitem $repertoire -File -Filter "*.txt" -ErrorAction Stop )){
+foreach($file in (get-childitem -ErrorAction Stop $repertoire -File -Filter "*.txt"  )){
    $nom = [System.IO.Path]::GetFileName("$file")
 
- "$nom" + " " + (get-content $file.fullname | select -First 10) | add-content entete.txt -ErrorAction Stop
+ "$nom" + " " + (get-content -ErrorAction Stop $file.fullname | select -First 10) | add-content entete.txt 
      
   }
 } 

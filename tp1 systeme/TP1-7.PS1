@@ -1,6 +1,12 @@
 
-$list = Get-ChildItem D:\2SteamLibrary -File -Recurse
+$list = Get-ChildItem -ErrorAction Stop $args -File -Recurse
 
-foreach ($file in $list){
-    $nom = [System.IO.Path]::GetFileName("$file")
-    Get-ChildItem "D:\2SteamLibrary" -Depth 2 -file -filter "$nom" | add-content cd
+try {
+    foreach ($file in $list){
+        $nom = [System.IO.Path]::GetFileName("$file")
+        Get-ChildItem -ErrorAction Stop $file -Depth 2 -file -filter "$nom" | add-content cd
+    }  
+}
+catch {
+    echo "Une Erreur c'est produite"
+}
