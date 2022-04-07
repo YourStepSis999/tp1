@@ -3,6 +3,8 @@
 # Session : H2022
 # Date de création : 2022-04-01
 
+# le code permet d'avoir plus de détail (nom, id, taille en mémoire centrale, nombre de threads) sur un processus passé en ligne de commande.
+
 $Processus = $args
 
 

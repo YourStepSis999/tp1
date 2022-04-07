@@ -2,6 +2,9 @@
 # DA : 2130875
 # Session : H2022
 # Date de création : 2022-04-01
+
+# Indiquez le nombre le plus grand et le nombre le plus petit parmi les arguments reçus.
+
 #!/bin/bash
 
 
@@ -12,6 +15,12 @@ then
     exit 1
 fi
   
+  regex = "[!0-9]"
+if [[ ! "$#" =~ $regex ]]
+then
+    echo "argument n'est pas une chiffre"
+fi
+
 
 maxEle=$1
 minEle=$1

@@ -3,6 +3,14 @@
 # Session : H2022
 # Date de création : 2022-04-01
 
+# Simule un combat de jeu de carte de bataille
+#
+# À tour de rôle, chaque joueur pige la carte sur le dessus de sa pile de carte et les deux cartes s'affrontent:
+# La carte la plus élevée gagne et les deux cartes se retrouvent en dessous de la pile du gagnant.
+# En cas d'égalité, chacun perd sa carte.
+# Dès qu'un joueur ne peut plus jouer (donc se retrouve sans carte), il perd.
+
+
 #!/bin/bash
 
 deck=(1 2 3 4 5 6 7 8 9 10 11 12 13 1 2 3 4 5 6 7 8 9 10 11 12 13 1 2 3 4 5 6 7 8 9 10 11 12 13 1 2 3 4 5 6 7 8 9 10 11 12 13)

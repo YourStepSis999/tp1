@@ -3,6 +3,8 @@
 # Session : H2022
 # Date de création : 2022-04-01
 
+# recherche dans le répertoire présent et les enfants, les fichiers ayant le même nom et les indique dans un fichier sortie.
+
 #!/bin/bash
 
 cd "$1"

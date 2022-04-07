@@ -3,6 +3,8 @@
 # Session : H2022
 # Date de création : 2022-04-01
 
+#  liste les disques, l'espace disponible, l'espace utilisé, le pourcentage d'utilisation et la capacité maximale totale pour chacun d'eux. Exporter le résultat dans un fichier HTML nommé fichier.html.
+
 $disks = get-wmiobject Win32_LogicalDisk  -Filter "DriveType = 3"
 
 foreach ($disk in $disks) {$letter = $disk.deviceID

@@ -3,6 +3,7 @@
 # Session : H2022
 # Date de création : 2022-04-01
 
+# recherche dans le répertoire en cours et enfant tous les fichiers et inscris en ordre décroissant (du plus gros au plus petit), le nom et la taille du fichier.
 
 $repertoire = $args
 try {

@@ -3,6 +3,8 @@
 # Session : H2022
 # Date de création : 2022-04-01
 
+# un script qui offre des opérations dans un menu, l'utilisateur ne choisit qu'une seule option à la fois. Tant que l'utilisateur ne choisit le e, le script réaffiche le menu.
+
 #!/bin/bash
 
 while true

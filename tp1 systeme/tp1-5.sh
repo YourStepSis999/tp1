@@ -3,6 +3,8 @@
 # Session : H2022
 # Date de création : 2022-04-01
 
+# recherche tous les fichiers dans le répertoire et les sous-répertoires enfants et inscrire en ordre décroissant (du plus gros au plus petit), le nom et la taille du fichier.
+
 #!/bin/bash
 
 cd "$1"
